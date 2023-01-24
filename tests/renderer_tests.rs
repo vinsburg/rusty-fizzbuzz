@@ -24,3 +24,8 @@ pub fn test_six_is_rendered_as_fizz() {
 pub fn test_five_is_rendered_as_buzz() {
     assert_eq!("Buzz!", renderer::render(5))
 }
+
+#[test]
+pub fn test_ten_is_rendered_as_buzz() {
+    assert_eq!("Buzz!", renderer::render(10))
+}
