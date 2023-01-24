@@ -1,3 +1,6 @@
 pub fn render(number: u32) -> String {
-    number.to_string()
+    return match number {
+        3 => "Fizz".to_string(),
+        other => other.to_string(),
+    }
 }
