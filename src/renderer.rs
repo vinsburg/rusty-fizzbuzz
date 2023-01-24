@@ -1,6 +1,10 @@
 pub fn render(number: u32) -> String {
-    return match number {
-        3 => "Fizz".to_string(),
-        other => other.to_string(),
+    let mut rendered: String = "".to_string();
+    if (number % 3) != 0 {
+        rendered = "Fizz".to_string();
     }
+    if rendered == "" {
+        rendered = number.to_string();
+    }
+    rendered
 }
