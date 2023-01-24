@@ -1,3 +1,3 @@
-pub fn render(_number: u32) -> &'static str {
-    "1"
+pub fn render(number: u32) -> String {
+    number.to_string()
 }
