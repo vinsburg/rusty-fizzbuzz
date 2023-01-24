@@ -29,3 +29,8 @@ pub fn test_five_is_rendered_as_buzz() {
 pub fn test_ten_is_rendered_as_buzz() {
     assert_eq!("Buzz!", renderer::render(10))
 }
+
+#[test]
+pub fn test_fifteen_is_rendered_as_fizzbuzz() {
+    assert_eq!("FizzBuzz!", renderer::render(15))
+}
