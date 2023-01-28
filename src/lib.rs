@@ -1,2 +1,2 @@
 pub mod renderer;
-pub mod sequencer;
+pub mod sequencers;
