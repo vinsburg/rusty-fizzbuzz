@@ -6,7 +6,7 @@ pub struct Sequencer {
 }
 
 fn default_display(content: &str) {
-    print!("{}", content);
+    print!("{}\n", content);
 }
 
 impl Sequencer {
@@ -18,7 +18,9 @@ impl Sequencer {
     }
 
     pub fn sequence(self: &Self, count: u32) {
-        let content: String = (self.render)(count);
-        (self.display)(&content[..])
+        for number in 1..count+1 {
+            let content: String = (self.render)(number);
+            (self.display)(&content[..]);
+        }
     }
 }
