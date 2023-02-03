@@ -1,4 +1,4 @@
-// use fizzbuzz::sequencers;
+use fizzbuzz::sequencers::Sequencer;
 struct Screen {
     displayed: Vec<String>,
 }
@@ -29,17 +29,20 @@ pub fn test_screen_displays_x1() {
     assert_eq!("x1", screen.displayed[0])
 }
 
-// #[test]
-// pub fn test_should_render_one_as_x1() {
-//     let mut screen: Screen = Screen::new();
-//     let sequencer: sequencers::Sequencer = sequencers::Sequencer {
-//         render: render,
-//         display: screen.display,
-//     };
-//     sequencer.sequence(2);
-//     assert_eq!(2, screen.displayed.len())
-// }
+#[test]
+pub fn test_should_display_two_numbers() {
+    let mut screen: Screen = Screen::new();
+    let display = |content: &str| screen.display(content);
+    let mut sequencer = Sequencer{render, display};
+    sequencer.sequence(2);
+    assert_eq!(2, screen.displayed.len())
+}
 
-// implement two tests calling screen and sequencer with the screen render and display
-// one test should call one and read x1 from display
-// the other should call on two and verify two numbers displayed
+#[test]
+pub fn test_should_render_one_as_x1() {
+    let mut screen: Screen = Screen::new();
+    let display = |content: &str| screen.display(content);
+    let mut sequencer = Sequencer{render, display};
+    sequencer.sequence(1);
+    assert_eq!("x1", screen.displayed[0])
+}
