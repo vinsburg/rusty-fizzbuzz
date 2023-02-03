@@ -13,7 +13,7 @@ impl Screen {
     }
 }
 
-fn render(count: u32) -> String {
+fn render(count: usize) -> String {
     format!("{}{}", "x", count.to_string())
 }
 

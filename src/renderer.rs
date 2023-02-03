@@ -1,4 +1,4 @@
-pub fn render(number: u32) -> String {
+pub fn render(number: usize) -> String {
     let mut rendered: String = "".to_string();
     if (number % 3) == 0 {
         rendered = "Fizz".to_string();
