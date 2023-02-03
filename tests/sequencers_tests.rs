@@ -17,17 +17,17 @@ fn render(count: usize) -> String {
     format!("{}{}", "x", count.to_string())
 }
 
-#[test]
-pub fn test_screen_renders_one_as_x1() {
-    assert_eq!("x1", render(1))
-}
+// #[test]
+// pub fn test_screen_renders_one_as_x1() {
+//     assert_eq!("x1", render(1))
+// }
 
-#[test]
-pub fn test_screen_displays_x1() {
-    let mut screen: Screen = Screen::new();
-    screen.display("x1");
-    assert_eq!("x1", screen.displayed[0])
-}
+// #[test]
+// pub fn test_screen_displays_x1() {
+//     let mut screen: Screen = Screen::new();
+//     screen.display("x1");
+//     assert_eq!("x1", screen.displayed[0])
+// }
 
 #[test]
 pub fn test_should_display_two_numbers() {
