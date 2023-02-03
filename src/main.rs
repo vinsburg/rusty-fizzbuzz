@@ -1,6 +1,6 @@
-use fizzbuzz::sequencers::Sequencer;
+use fizzbuzz::sequencers;
 
 fn main() {
-    let sequencer = Sequencer::new();
+    let sequencer = sequencers::get_default_sequencer();
     sequencer.sequence(100);
 }
